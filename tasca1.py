@@ -2,7 +2,7 @@ import networkx as nx
 
 def build_lastgraph():
     edgelist = []
-    with open("lastfm_asia_edges_copy.csv","r") as fitxer:
+    with open("lastfm_asia_edges.csv","r") as fitxer:
         next(fitxer)
         for linia in fitxer:
             node1, node2 = linia.strip().split(",")
@@ -14,5 +14,4 @@ def build_lastgraph():
 
 G = build_lastgraph()
 
-print(list(G.neighbors(3)))
-#G.edges([1, 3])
+print(G.edges)
